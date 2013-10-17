@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15F49E56-FFE5-42CD-9C37-AC574B57AA5E}</ProjectGuid>
+    <RootNamespace>MiniCRT</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="alloc.cc" />
+    <ClCompile Include="alloc2.cc" />
+    <ClCompile Include="allocsup.cc" />
+    <ClCompile Include="argcargv.cc" />
+    <ClCompile Include="bsearch.c" />
+    <ClCompile Include="charmax.c" />
+    <ClCompile Include="crt0tcon.cc" />
+    <ClCompile Include="crt0twin.cc" />
+    <ClCompile Include="dllcrt0.cc" />
+    <ClCompile Include="fullpath.cc" />
+    <ClCompile Include="initterm.cc" />
+    <ClCompile Include="isctype.cc" />
+    <ClCompile Include="memory.cc" />
+    <ClCompile Include="misc.cc" />
+    <ClCompile Include="newdel.cc" />
+    <ClCompile Include="pesect.c" />
+    <ClCompile Include="puts.cc" />
+    <ClCompile Include="resetstk.c" />
+    <ClCompile Include="security.cc" />
+    <ClCompile Include="stricmp.cc" />
+    <ClCompile Include="string.c" />
+    <ClCompile Include="string.cc" />
+    <ClCompile Include="struplwr.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="argcargv.h" />
+    <ClInclude Include="initterm.h" />
+    <ClInclude Include="libctiny.h" />
+    <ClInclude Include="memory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="alloca16.obj" />
+    <Object Include="chandler4.obj" />
+    <Object Include="chkstk.obj" />
+    <Object Include="dllsupp.obj" />
+    <Object Include="eh3valid.obj" />
+    <Object Include="exsup.obj" />
+    <Object Include="exsup3.obj" />
+    <Object Include="exsup4.obj" />
+    <Object Include="ftol2.obj" />
+    <Object Include="lldiv.obj" />
+    <Object Include="lldvrm.obj" />
+    <Object Include="llmul.obj" />
+    <Object Include="llrem.obj" />
+    <Object Include="llshl.obj" />
+    <Object Include="llshr.obj" />
+    <Object Include="sehprolg.obj" />
+    <Object Include="sehprolg4.obj" />
+    <Object Include="sehprolg4gs.obj" />
+    <Object Include="ulldiv.obj" />
+    <Object Include="ulldvrm.obj" />
+    <Object Include="ullrem.obj" />
+    <Object Include="ullshr.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
